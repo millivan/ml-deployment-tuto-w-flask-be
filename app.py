@@ -51,9 +51,13 @@ def predict():
     output = float(output)
 
     if output > 0.5:
-        return render_template("result.html", pred="Yes")
+        return render_template(
+            "result.html", pred="You may have diabetes based on our KNN model "
+        )
     else:
-        return render_template("result.html", pred="No")
+        return render_template(
+            "result.html", pred="Prediction shows you don't have diabetes"
+        )
 
 
 if __name__ == "__main__":
