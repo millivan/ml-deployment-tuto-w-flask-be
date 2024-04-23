@@ -6,10 +6,10 @@
       "config": { "maxLambdaSize": "15mb", "runtime": "python3.8" }
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "app.py"
+      "source": "/",
+      "destination": "app.py"
     }
   ]
 }
