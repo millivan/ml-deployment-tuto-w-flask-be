@@ -16,7 +16,7 @@ model = pickle.load(open("example_weights_knn.pkl", "rb"))
 
 @app.route("/")
 def use_template():
-    return render_template("index.html")
+    return "Hi"
 
 
 @app.route("/predict", methods=["POST", "GET"])
@@ -60,5 +60,5 @@ def predict():
         )
 
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+# if __name__ == "__main__":
+#     app.run(host="0.0.0.0", port="5000")
